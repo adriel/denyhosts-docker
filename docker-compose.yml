@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  denyhosts:
+      container_name: denyhosts-client
+      restart: unless-stopped
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      volumes:
+        - /var/log/auth.log:/var/log/auth.log:ro
