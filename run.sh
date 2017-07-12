@@ -13,4 +13,4 @@ if [ -f "$PID_FILE" ]; then
   rm -r "$PID_FILE"
 fi
 
-exec python /usr/bin/denyhosts.py --config /etc/denyhosts.conf --sync --foreground
+exec python /usr/bin/denyhosts.py --config /etc/denyhosts.conf --noemail --sync --foreground
