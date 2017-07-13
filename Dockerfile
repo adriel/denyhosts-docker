@@ -5,9 +5,10 @@ LABEL denyhosts_version="3.0" architecture="amd64"
 
 RUN apk add --no-cache git python py-ipaddr \
  && git clone https://github.com/denyhosts/denyhosts.git \
- && apk del git \
- && cd denyhosts \
- && python setup.py install \
+ && apk del git
+
+ WORKDIR /denyhosts
+ RUN python setup.py install \
  && rm -r /denyhosts
 
 COPY denyhosts.conf /etc/denyhosts.conf
