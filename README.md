@@ -1,6 +1,6 @@
 # DenyHosts
 
-Runs a lightweight up to date, DenyHosts 3.0 instance on the log file you choose (usually `/var/log/secure`) and writes the IP addresses that have been blocked  to `/etc/hosts.deny`.
+Runs a lightweight up to date, [DenyHosts](https://github.com/denyhosts/denyhosts) 3.0 instance on the log file you choose (usually `/var/log/secure`) and writes the IP addresses that have been blocked  to `/etc/hosts.deny`.
 
 By default it'll upload IPs you block to the DenyHosts sync server to share with other DenyHosts users, you can turn this off in the `denyhosts.conf` config file.
 
