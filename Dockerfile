@@ -1,10 +1,10 @@
-FROM alpine:3.6
+FROM alpine
 
 MAINTAINER Adriel Kloppenburg
 LABEL denyhosts_version="3.0" architecture="amd64"
 
 RUN apk add --no-cache git python py-ipaddr \
- && git clone https://github.com/denyhosts/denyhosts.git \
+ && git clone --single-branch --branch "Python2.6" https://github.com/denyhosts/denyhosts.git \
  && apk del git
 
 WORKDIR /denyhosts
